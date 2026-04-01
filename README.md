@@ -1,6 +1,7 @@
 # LG Aimers AI Competition: Model Optimization Hub
 
-본 저장소는 LG Aimers 경진대회 참여를 위해 다양한 모델 경량화 및 양자화(Quantization) 기법을 연구하고 실험하는 공간입니다. 
+본 저장소는 LG Aimers 경진대회 참여를 위해 다양한 모델 경량화 및 양자화(Quantization) 기법을 연구하고 실험한 결과입니다.
+연구 및 실험 기간은 2026년 02월 02일(월) 10:00 ~ 2026년 02월 26일(목) 10:00 입니다.
 
 ## Project Overview
 - **배경**: 최근 AI 서비스는 클라우드 기반의 대규모 모델을 넘어, On-Device 환경에서도 빠르고 안정적으로 동작하는 경량 모델에 대한 요구가 급격히 증가하고 있습니다.
@@ -23,3 +24,22 @@ EXAONE은 Global Frontier 급의 Large-scale 모델과 함께, 노트북·모바
 ```bash
 # 기본 라이브러리 설치
 pip install torch transformers optimum auto-gptq
+
+## 주요 성과 (Achievements)
+
+** LG Aimers 8기 Phase 2 진출 및 예비선발후보 1순위(총 28위) **
+
+- **최종 지위**: **예비선발후보 1순위** (LG Aimers 8기 Phase 2 코드 및 PPT 제출 대상)
+- **핵심 성과**: 
+  - 정밀도 손실 최소화 기반 **W8A8 GPTQ** 및 **FP8 Dynamic KV Cache** 최적화 적용
+  - **Custom Calibration** 기법을 통한 데이터 편향 보정 및 모델 강건성 확보
+  - 공모전 평가 지표에서 상위권의 점수를 기록하며 기술적 역량 증명
+
+| 구분 | 상세 내용 | 비고 |
+| :--- | :--- | :--- |
+| **대회명** | LG Aimers 8기 | Phase 3 진출 실패 |
+| **선발 결과** | **예비선발후보 1순위** | 상위 우수 성과자 그룹 |
+| **주요 기술** | GPTQ, FP8, KV Cache Tuning | 추론 엔진 최적화 중심 |
+
+>  **Core Insight**: 예비선발후보 1순위라는 결과는 모델의 예측 정확도뿐만 아니라,
+**FP8 Dynamic KV Cache** 수정 등 저수준(Low-level)에서의 메모리 최적화와 정밀한 캘리브레이션 작업이 실제 성능 향상에 유효했음을 시사합니다.
